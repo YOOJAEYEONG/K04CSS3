@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator.html</title>
+    <style>
+        table {
+            background-color: #dddddd;
+            width: 400px; height: 400px;
+            align-content: center;
+            text-align: center;
+            color: whitesmoke;
+            font-weight: bold; 
+            font-size: 20px;
+            border-radius: 15px;
+            border-spacing: 7px;
+            margin: 20%;
+        }
+        td{
+            
+            width: 25%;
+            border-radius: 10px;
+            
+        }
+        table tr td.func {
+            background-color: #FA960A;
+        }
+        table tr td.twokey {
+            background-color: #7B7B7B; 
+            
+        }
+        
+        tr.keypad td{
+            background-color: #373737;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td colspan="4" rowspan="2"
+                 style="font-size: 40px; font-weight: bold;
+                  text-align: right ; padding-right: 20px; 
+                  background-color: #70C738;
+                  color: black;">
+                  123+654
+            </td>
+            <!-- <td>2</td>
+            <td>3</td>
+            <td>4</td> -->
+        </tr>
+        <tr>
+            <!-- <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td> -->
+        </tr>
+        <tr>
+            <td class="twokey" colspan="2">BackSpace</td>
+            <!-- <td>6</td> -->
+            <td class="twokey" colspan="2">C</td>
+            <!-- <td>8</td> -->
+        </tr>
+        <tr class="keypad">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td class="func">/</td>
+        </tr>
+        <tr class="keypad">
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td class="func">x</td>
+        </tr>
+        <tr class="keypad">
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td class="func">+</td>
+        </tr>
+        <tr class="keypad">
+            <td>=</td>
+            <td>0</td>
+            <td>.</td>
+            <td class="func">-</td>
+        </tr>
+    </table>
+</body>
+</html>

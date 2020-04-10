@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration.html</title>
+    <style>
+        td {
+            font-size: 12px;
+        }
+        table {
+            border-spacing: 10px;
+        }
+        table[check_table] {
+            border-spacing: 0;
+        }
+        input[type="tel"] {
+            width: 55px; height: 20px;
+        }
+        span.sms, span.subscribe {
+            color: gainsboro;
+        }
+        span.title1 {
+            font-weight: bold;
+        }
+        span.title2 {
+            color: red; font-weight: bold;
+        }
+        table.addinfo {
+            width: 600px;
+            background-color: whitesmoke;
+        }
+        table tr td:first-child {
+            width: 150px;
+        }
+        input[type="button"] {
+            background-color: mediumseagreen; 
+        }
+        input.address {
+            width: 100px;
+        }
+        input.etc{
+            width: 100px;
+            font-size: 11px;
+            color: lightgray;
+        }
+        input[textbox]{
+            width: 150px; height: 20px;
+        }
+        select{
+            width: 80px;  height: 25px; 
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <span class="title1">회원정보</span>
+    <span class="title2">(필수)</span>
+  
+    <table style="border: 1px solid; width: 600px;">
+        <tr>
+            <td>아이디</td>
+            <td>
+                <input textbox type="text" name="user_id" value="4자리 이상"/>
+                <input textbox type="button"  value="아이디중복확인"/>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input textbox type="password" name="user_pwd"/></td>
+        </tr>
+        <tr>
+            <td>비밀번호확인</td>
+            <td><input textbox type="password" name="user_pwd"/></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input textbox type="text" name="user_name"> </td>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td>
+                <input type="radio" name="job" value="M" checked="checked" />남성
+                &nbsp;&nbsp;
+                <input type="radio" name="job" value="W" />여성</td>
+        </tr>
+        <tr>
+            <td>생년월일</td>
+            <td>
+                <input textbox type="date" name="user_name">
+                <input type="radio" name="bd" value="SUN" checked/>양력
+                <input type="radio" name="bd" value="MOON" />음력
+            </td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td>
+                <input textbox type="email" name="email_id"> @
+                <input textbox type="email" name="email_domain">
+                <select name="domain" >
+                    <option value="nate.com" >네이트</option>
+                    <option value="gmail.com">지메일</option>
+                    <option value="naver.com">네이버</option>
+                    <option value="daum.net">다음</option>
+                </select>
+                <br>
+                <span class="subscribe" style="font-size: 11px; color: gray;">
+                    이메일 수신동의시, 신상품/할인해택/이벤트 등의 정보를 받아보실 수 있습니다. 
+                    <br>수신동의 거부시에도 기본서비스(주문배송 메일)는 발송됩니다.
+                </span>
+                <input type="radio" name="agree" value="subscribe" checked/>예
+                <input type="radio" name="disAgree" value="unsubscribe" />아니오
+            </td>
+            
+        </tr>
+        <tr>
+            <td>휴대전화</td>
+            <td>
+                <input type="tel" name="phone_number">-
+                <input type="tel" name="phone_number">-
+                <input type="tel" name="phone_number">
+
+                
+                <br>
+                <span class="sms" style="font-size: 11px; color: gray;">
+                    할인해택과 이벤트 등의 소식안내를 SMS로 받으실 수 있습니다. 
+                    <br>수신동의 거부시에도 기본서비스는 발송됩니다.
+                </span>
+                <input type="radio" name="agree" value="subscribe" checked/>예
+                <input type="radio" name="disAgree" value="unsubscribe" />아니오
+            </td>
+            
+        </tr>
+
+    </table>
+    <br><br><br>
+    <table class="addinfo" >
+        <span class="title1">부가정보</span>
+        <span class="title2">(선택)</span>
+        <tr>
+            <td>일반전화</td>
+            <td>
+                <input type="tel" name="phone_number">-
+                <input type="tel" name="phone_number">-
+                <input type="tel" name="phone_number">
+            </td>
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td>
+                <input class="address" type="text" name="address" />
+                <input type="button" value="우편번호검색"/>
+            </td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input class="address" type="text" name="address" />
+                <input class="address, etc" type="text" name="address" value="상세주소" />
+            </td>
+        </tr>
+        <tr>
+            <td>직업</td>
+            <td>
+                <select name="domain" >
+                    <option value="" >▒선택▒</option>
+                    <option value="gmail.com">무직</option>
+                    <option value="naver.com">사무직</option>
+                    <option value="daum.net">영업직</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>브렌드관심도</td>
+            <td>
+                <table check_table>
+                    <tr>
+                        <td><input type="checkbox" name="interest" value="" checked/>한빛미디어</td>
+                        <td><input type="checkbox" name="interest" value="" />한빛아카데미</td>
+                        <td><input type="checkbox" name="interest" value="" />한빛비츠</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="interest" value="" />한빛라이프</td>
+                        <td><input type="checkbox" name="interest" value="" />리얼타임 eBook</td>
+                        <td><input type="checkbox" name="interest" value="" />MAKE</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="interest" value="" />한빛에듀</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>관심분야</td>
+            <td>
+                <table check_table>
+                    <tr>
+                        <td><input type="checkbox" name="interest" value="" checked/>프로그래밍 언어</td>
+                        <td><input type="checkbox" name="interest" value="" />웹</td>
+                        <td><input type="checkbox" name="interest" value="" />모바일/게임</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="interest" value="" />데이터베이스</td>
+                        <td><input type="checkbox" name="interest" value="" />네트워크/보안</td>
+                        <td><input type="checkbox" name="interest" value="" />IT자격증/수험서</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="interest" value="" />OA/오피스</td>
+                        <td><input type="checkbox" name="interest" value="" />디자인</td>
+                        <td><input type="checkbox" name="interest" value="" />사진/예술</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="interest" value="" />경제/경영</td>
+                        <td><input type="checkbox" name="interest" value="" />자기계발</td>
+                        <td><input type="checkbox" name="interest" value="" />인문/사회/과학</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="interest" value="" />여행/취미</td>
+                        <td><input type="checkbox" name="interest" value="" />가정/건강/유아</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="interest" value="" />기타:
+                            <input type="text" name="interest_things" size="9px"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <input type="button" value="바로가입하기" style="margin: 0 auto; posi;" />
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
